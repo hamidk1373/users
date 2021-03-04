@@ -1,0 +1,58 @@
+.userscontainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 70vw;
+  gap: 1rem;
+}
+
+.userscontainer__item {
+  border: 1px solid grey;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.userscontainer__name {
+  margin-bottom: 1rem;
+}
+
+.userscontainer__ip {
+  font-size: 12px;
+}
+
+.filterBoxContainer {
+  width: 70vw;
+  border: 1px solid grey;
+  padding: 1.2rem;
+  border-radius: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+}
+
+.filterBoxContainer__searchbox {
+  flex: 2;
+}
+
+.filterBoxContainer__selectorbox {
+  flex: 1;
+  background-color: green;
+}
+
+.filterBoxContainer__searchbox input {
+  padding: 1rem 18px;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: white;
+}
+.filterBoxContainer__searchbox label {
+  position: absolute;
+  top: -12px;
+  left: 36px;
+  background: #282c35;
+  padding-left: 4px;
+  padding-right: 6px;
+}
