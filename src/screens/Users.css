@@ -56,3 +56,7 @@
   padding-left: 4px;
   padding-right: 6px;
 }
+
+.selectedGender {
+  border: 2px solid black;
+}
