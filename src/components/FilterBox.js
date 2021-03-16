@@ -1,4 +1,10 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
+import { styled } from "@material-ui/core/styles";
+
+const MyButton = styled(Button)({
+  marginRight: 4,
+});
 
 export default function FilterBox({
   searchValue,
@@ -7,30 +13,39 @@ export default function FilterBox({
   onChangeSelectedGender,
 }) {
   return (
-    <div className='filterBoxContainer'>
-      <div className='filterBoxContainer__searchbox'>
+    <div className="filterBoxContainer">
+      <div className="filterBoxContainer__searchbox">
         <label>First name</label>
         <input
-          placeholder='Search in user names...'
+          placeholder="Search in user names..."
           value={searchValue}
           onChange={onChange}
           // onChange={(event)=>onChange(event)}
         />
       </div>
-      <div className='filterBoxContainer__selectorbox'>
-        <button
+      <div className="filterBoxContainer__selectorbox">
+        <MyButton
+          variant="contained"
+          color="primary"
           onClick={() => onChangeSelectedGender("Male")}
-          className={selectedGender === "Male" ? "selectedGender" : ""}
         >
           Male
-        </button>
-        <button
-          onClick={() => onChangeSelectedGender("Female")}
-          className={selectedGender === "Female" ? "selectedGender" : ""}
+        </MyButton>
+        <MyButton
+          variant="contained"
+          color="primary"
+          onClick={() => onChangeSelectedGender("female")}
         >
           Female
-        </button>
-        <button onClick={() => onChangeSelectedGender(undefined)}>X</button>
+        </MyButton>
+
+        <MyButton
+          variant="contained"
+          color="primary"
+          onClick={() => onChangeSelectedGender(undefined)}
+        >
+          X
+        </MyButton>
       </div>
     </div>
   );
