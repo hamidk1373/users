@@ -1,13 +1,17 @@
 import React from "react";
+import UserProfile from "./UserProfile";
 
-export default function UsersList({ list }) {
+export default function UsersList({ list, onDeleteItemClicked }) {
   return (
     <div className='userscontainer'>
       {list.map((item) => (
-        <div className='userscontainer__item'>
-          <div className='userscontainer__name'>{item.first_name}</div>
-          <div className='userscontainer__ip'>{item.ip_address}</div>
-        </div>
+        <UserProfile
+          key={item.id}
+          // item={item}
+          first_name={item.first_name}
+          ip_address={item.ip_address}
+          onDeleteItemClicked={() => onDeleteItemClicked(item.id)}
+        />
       ))}
     </div>
   );

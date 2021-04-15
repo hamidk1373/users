@@ -1,16 +1,16 @@
-import React from "react";
-import Button from "@material-ui/core/Button";
-import { styled } from "@material-ui/core/styles";
+import React from 'react'
+import Button from '@material-ui/core/Button'
+import { styled } from '@material-ui/core/styles'
 
 const MyButton = styled(Button)({
-  marginRight: 4,
-});
+  marginRight: 4
+})
 
 export default function FilterBox({
   searchValue,
   onChange,
   selectedGender,
-  onChangeSelectedGender,
+  onChangeSelectedGender
 }) {
   return (
     <div className="filterBoxContainer">
@@ -27,14 +27,14 @@ export default function FilterBox({
         <MyButton
           variant="contained"
           color="primary"
-          onClick={() => onChangeSelectedGender("Male")}
+          onClick={() => onChangeSelectedGender('Male')}
         >
           Male
         </MyButton>
         <MyButton
           variant="contained"
           color="primary"
-          onClick={() => onChangeSelectedGender("female")}
+          onClick={() => onChangeSelectedGender('female')}
         >
           Female
         </MyButton>
@@ -48,5 +48,5 @@ export default function FilterBox({
         </MyButton>
       </div>
     </div>
-  );
+  )
 }

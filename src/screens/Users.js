@@ -47,6 +47,14 @@ export default function Users() {
     setfilteredList([...newFilteredList]);
   }, [searchInputValue, selectedGender, list]);
 
+  const handleDeleteItem = (itemId) => {
+    const selectedItemIndex = list.findIndex((tmp) => tmp.id === itemId);
+    setlist([
+      ...list.slice(0, selectedItemIndex),
+      ...list.slice(selectedItemIndex + 1),
+    ]);
+  };
+
   return (
     <div>
       <FilterBox
@@ -55,7 +63,7 @@ export default function Users() {
         selectedGender={selectedGender}
         onChangeSelectedGender={setselectedGender}
       />
-      <UsersList list={filteredList} />
+      <UsersList list={filteredList} onDeleteItemClicked={handleDeleteItem} />
     </div>
   );
 }
