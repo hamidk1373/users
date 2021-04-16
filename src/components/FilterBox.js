@@ -13,11 +13,10 @@ export default function FilterBox({
   return (
     <div className="filterBoxContainer">
       <div className="filterBoxContainer__searchbox">
-        <label htmlFor="serachinput">First name</label>
         <input
           id="serachinput"
           type="text"
-          placeholder="Search in user names..."
+          placeholder="Search in userNames..."
           value={searchValue}
           onChange={onChange}
           // onChange={(event)=>onChange(event)}

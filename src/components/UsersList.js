@@ -7,8 +7,8 @@ export default function UsersList({ list, onDeleteItemClicked }) {
         <UserProfile
           key={item.id}
           // item={item}
-          first_name={item.first_name}
-          ip_address={item.ip_address}
+          firstName={item.first_name}
+          ipAddress={item.ip_address}
           onDeleteItemClicked={() => onDeleteItemClicked(item.id)}
         />
       ))}
