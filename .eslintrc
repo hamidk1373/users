@@ -1,11 +1,5 @@
 {
-  "extends": [
-    "airbnb",
-    "airbnb/hooks",
-    "plugin:prettier/recommended",
-    "prettier/react",
-    "prettier/standard"
-  ],
+  "extends": ["airbnb", "airbnb/hooks", "prettier"],
   "plugins": ["prettier"],
   "parserOptions": {
     "ecmaFeatures": {
@@ -24,7 +18,9 @@
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
     "import/prefer-default-export": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   },
   "globals": {
     "window": true,

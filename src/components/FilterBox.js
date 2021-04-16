@@ -1,6 +1,5 @@
-import React from 'react'
-import Button from '@material-ui/core/Button'
 import { styled } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
 
 const MyButton = styled(Button)({
   marginRight: 4
@@ -9,14 +8,15 @@ const MyButton = styled(Button)({
 export default function FilterBox({
   searchValue,
   onChange,
-  selectedGender,
   onChangeSelectedGender
 }) {
   return (
     <div className="filterBoxContainer">
       <div className="filterBoxContainer__searchbox">
-        <label>First name</label>
+        <label htmlFor="serachinput">First name</label>
         <input
+          id="serachinput"
+          type="text"
           placeholder="Search in user names..."
           value={searchValue}
           onChange={onChange}

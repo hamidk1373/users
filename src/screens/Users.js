@@ -1,9 +1,10 @@
+
+import { useEffect, useState } from "react";
+import Fuse from "fuse.js";
 import FilterBox from "../components/FilterBox";
 import UsersList from "../components/UsersList";
 import { mockData } from "../mockData/users";
 import "./Users.css";
-import { useEffect, useState } from "react";
-import Fuse from "fuse.js";
 
 const options = {
   threshold: 0.4,
@@ -59,8 +60,7 @@ export default function Users() {
     <div>
       <FilterBox
         searchValue={searchInputValue}
-        onChange={(event) => setsearchInputValue(event.target.value)}
-        selectedGender={selectedGender}
+        onChange={(event) => setsearchInputValue(event.target.value)}       
         onChangeSelectedGender={setselectedGender}
       />
       <UsersList list={filteredList} onDeleteItemClicked={handleDeleteItem} />
